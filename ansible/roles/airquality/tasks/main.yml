@@ -9,10 +9,14 @@
   - dc1100.sh
   - LICENSE.txt
 
-- synchronize: src={{repodir}}/monit/monitrc dest=/etc/monit/conf.d/airquality
+- name: monitrc
+  synchronize: src={{repodir}}/monit/monitrc dest=/etc/monit/conf.d/airquality
 
 - name: make monit run on boot
   synchronize: src={{repodir}}/monit/monit.service dest=/lib/systemd/system/monit.service
+
+- name: dc1100_wrapper
+  synchronize: src={{repodir}}/monit/dc1100_wrapper.sh dest=/home/{{ansible_ssh_user}}
 
 - shell: systemctl daemon-reload
 - shell: systemctl enable monit.service

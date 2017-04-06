@@ -1,3 +1,3 @@
-check process doorbell matching ".*bash.*dc1100.sh"
-      start program = "/home/pi/dc1100.sh"
-      stop program = "/bin/ps aux | /bin/grep bash | /bin/grep dc1100 | awk '{print $2}' | /usr/bin/xargs kill"
+check process airquality with pidfile /var/run/dc1100.pid
+      start program = "/home/pi/dc1100_wrapper.sh start"
+      stop program = "/home/pi/dc1100_wrapper.sh stop"
