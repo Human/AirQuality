@@ -1,14 +1,14 @@
-#Purpose
+# Purpose
 
 * This program interfaces with a Dylos DC1100 air quality monitor and reports the large and small particle count to openHAB each minute.
 
-#Features
+# Features
 
 1. Integration with [openHAB](http://openhab.org/) via its [RESTful API](https://github.com/openhab/openhab1-addons/wiki/Samples-REST). On the openHAB side, you can react accordingly to changes in air quality, such as send yourself a push notification warning of bad air quality.
 
-#HOWTO
+# HOWTO
 
-##What You Need
+## What You Need
 
 * A Linux computer (conventional or single-board) with a free USB port.
 
@@ -18,7 +18,7 @@
 
 * Basic Linux skills (file copying and editing).
 
-##Installation and Configuration
+## Installation and Configuration
 
 * Add these items to your openHAB installation's main items file, optionally adding them to an item group if you prefer:
 
