@@ -1,0 +1,10 @@
+- name: install software
+  hosts: airquality
+  become_user: root
+  remote_user: pi
+  become: yes
+  become_method: sudo
+  vars:
+    repodir: /repos/airquality
+  roles:
+    - airquality
